@@ -27,6 +27,7 @@ azLoginLog=`az login  --allow-no-subscriptions  --username <azureusername> --pas
 
 echo "Fetching Azure Functions in [$b2cTenancy]"
 
+#the below call lists the functions available on the subscription
 #az functionapp list --verbose --subscription $subscription 
 
 az functionapp deployment source show --name <functionname> --resource-group InterlateResGrp --subscription $subscription 
